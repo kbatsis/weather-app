@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather forecast app</title>
+    <link rel="stylesheet" href="weather-app.css">
+</head>
+<body>
+    <div class="container">
+        <span class="header-text">Weather forecast app</span>
+        <div class="search-field">
+            <label for="cityInput" class="city-input-lbl">City to forecast:</label>
+            <br>
+            <input type="text" id="cityInput" class="city-input" placeholder="City">
+            <button type="button" id="inputBtn" class="input-btn">Get 24 hour forecast</button>
+        </div>
+        <div class="forecast-wrapper">
+
+        </div>
+    </div>
+
+    <div class="error">
+
+    </div>
+
+    <div class="forecast hidden">
+            <span class="forecast-text" id="time"></span>
+            <img class="forecast-image" id="icon">
+            <span class="forecast-text" id="description"></span>
+            <span class="forecast-text" id="temperature"></span>
+            <span class="forecast-text" id="humidity"></span>
+            <span class="forecast-text" id="wind"></span>
+    </div>
+
+    <div class="error hidden" id="errorNotFound">
+        <span class="error-text">The requested city was not found.</span>
+    </div>
+
+    <div class="error hidden" id="errorApi">
+        <span class="error-text">Error while fetching the forecast data.</span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="weather-app.js"></script>
+</body>
+</html>
